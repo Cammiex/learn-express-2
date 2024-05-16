@@ -1,0 +1,24 @@
+GET http://localhost:8080/users
+
+###
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+    "email": "test@mail.com",
+    "fullname": "Test",
+    "gender": "L"
+}
+
+###
+PUT http://localhost:8080/users?userId=2
+Content-Type: application/json
+
+{
+    "email": "john@mail.com",
+    "fullname": "John Doe",
+    "gender": "L"
+}
+
+###
+DELETE http://localhost:8080/users/2
