@@ -5,20 +5,20 @@ POST http://localhost:8080/users
 Content-Type: application/json
 
 {
-    "email": "test@mail.com",
-    "fullname": "Test",
+    "email": "rio@mail.com",
+    "fullname": "Rio",
     "gender": "L"
 }
 
 ###
-PUT http://localhost:8080/users?userId=2
+PUT http://localhost:8080/users?userId=5
 Content-Type: application/json
 
 {
-    "email": "john@mail.com",
-    "fullname": "John Doe",
+    "email": "riooo@mail.com",
+    "fullname": "Riooo",
     "gender": "L"
 }
 
 ###
-DELETE http://localhost:8080/users/2
+DELETE http://localhost:8080/users/5

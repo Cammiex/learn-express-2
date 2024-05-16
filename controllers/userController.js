@@ -1,6 +1,6 @@
 import db from '../config/database.js';
 
-export const getAllUsers = async (req, res) => {
+export const getAllUsers = async (req, res, next) => {
   try {
     const sql = 'SELECT * FROM users';
     const [results] = await db.query(sql);
@@ -11,7 +11,7 @@ export const getAllUsers = async (req, res) => {
       },
     });
   } catch (error) {
-    console.log(error);
+    next(error);
   }
 };
 

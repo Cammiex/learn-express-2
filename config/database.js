@@ -1,10 +1,13 @@
+import dotenv from 'dotenv';
 import mysql from 'mysql2/promise';
 
+dotenv.config();
+
 const db = mysql.createPool({
-  host: 'localhost',
-  database: 'express',
-  user: 'root',
-  password: '',
+  host: `${process.env.DB_HOST}`,
+  database: `${process.env.DB_NAME}`,
+  user: `${process.env.DB_USER}`,
+  password: `${process.env.DB_PASSWORD}`,
 });
 
 db.getConnection()
